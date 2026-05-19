@@ -1,0 +1,15 @@
+{
+  "name": "instagram-login-new",
+  "version": "1.0.0",
+  "description": "Form login instagram",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/functions": "^5.2.2"
+  },
+  "devDependencies": {
+    "netlify-cli": "^26.0.2"
+  }
+}

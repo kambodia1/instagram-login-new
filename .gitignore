@@ -1,0 +1,5 @@
+node_modules
+.netlify
+.env
+bun.lock
+package-lock.json
